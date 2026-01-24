@@ -23,9 +23,12 @@ export function HomeScreen({ onSearchByNumber, onSearchByName }: HomeScreenProps
         {/* Church Logo */}
         <div className="flex justify-center mb-2">
           <img 
-            src="/logo.svg" 
+            src="/logo.png" 
             alt="Iglesia Cristiana Bíblica de Fusagasugá" 
             className="w-24 h-24 sm:w-32 sm:h-32 object-contain"
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+            }}
           />
         </div>
 

@@ -47,29 +47,24 @@ export function SettingsScreen({
             <h3 className="font-['Roboto'] text-[18px] text-[#333333] mb-4">
               Tipo de Fuente
             </h3>
-            <div className="space-y-3">
-              {(Object.keys(FONT_LABELS) as FontFamily[]).map((key) => (
-                <button
-                  key={key}
-                  onClick={() => onFontFamilyChange(key)}
-                  className={`w-full px-4 sm:px-6 py-3 rounded-lg border-2 transition-all ${
-                    fontFamily === key
-                      ? "border-[#C9A958] bg-[#C9A958]/5"
-                      : "border-gray-300 hover:border-[#C9A958]/50"
-                  }`}
-                >
-                  <div className="flex items-center justify-between gap-2 text-left">
-                    <p className="font-['Roboto'] text-[14px] sm:text-[15px] text-[#333333] min-w-0 flex-1">
-                      {FONT_LABELS[key].name}
-                    </p>
-                    <p
-                      className={`${getFontClass(key)} text-[14px] sm:text-[16px] text-gray-500 flex-shrink-0`}
-                    >
-                      {FONT_LABELS[key].sample}
-                    </p>
-                  </div>
-                </button>
-              ))}
+            <div className="relative">
+              <select
+                value={fontFamily}
+                onChange={(e) => onFontFamilyChange(e.target.value as FontFamily)}
+                className="w-full px-4 py-3 border-2 border-[#C9A958] rounded-lg font-['Roboto'] text-[15px] text-[#333333] bg-white focus:outline-none focus:ring-2 focus:ring-[#C9A958]/20 appearance-none cursor-pointer"
+                style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 20 20\'%3E%3Cpath stroke=\'%23C9A958\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'1.5\' d=\'M6 8l4 4 4-4\'/%3E%3C/svg%3E")', backgroundPosition: 'right 0.5rem center', backgroundRepeat: 'no-repeat', backgroundSize: '1.5em 1.5em', paddingRight: '2.5rem' }}
+              >
+                {(Object.keys(FONT_LABELS) as FontFamily[]).map((key) => (
+                  <option key={key} value={key}>
+                    {FONT_LABELS[key].name}
+                  </option>
+                ))}
+              </select>
+              <div className="mt-3 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+                <p className={`${getFontClass(fontFamily)} text-[16px] text-[#333333] text-center`}>
+                  {FONT_LABELS[fontFamily].sample} - Ejemplo de texto
+                </p>
+              </div>
             </div>
           </div>
 
