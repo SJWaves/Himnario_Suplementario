@@ -135,7 +135,7 @@ export function AboutScreen({ onBack }: AboutScreenProps) {
                 Himnario Suplementario
               </p>
               <p className="font-['Roboto'] text-[13px] text-[#999999]">
-                Versión 1.0.0
+                Versión 1.1.0
               </p>
               <p className="font-['Roboto'] text-[12px] text-[#AAAAAA]">
                 © 2026 Iglesia Cristiana Bíblica Fusagasugá

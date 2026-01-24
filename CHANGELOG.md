@@ -5,6 +5,37 @@ Todos los cambios notables en este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
+## [1.1.0] - 2026-01-24
+
+### ✨ Añadido (New Features)
+
+- **Formato de cursiva para coro**: El coro del himno #8 ahora se muestra en cursiva para destacarlo
+- Soporte completo para Capacitor y plataforma Android
+- Sección "Acerca de" con información detallada de la iglesia, himnario y desarrollo
+- Enlace directo al canal de YouTube de ICB Fusagasugá
+- Funcionalidad de compartir letra completa de himnos con referencias bíblicas
+- Pausa automática de audio al minimizar la app o cambiar de pestaña
+- Soporte para botón de atrás y gestos de navegación en Android
+
+### 🎨 Mejorado (Improvements)
+
+- Diseño del panel de búsqueda por número completamente renovado
+- Selector de fuentes cambiado a dropdown elegante con vista previa en tiempo real
+- Pantalla de inicio ampliada con elementos más grandes y visibles
+- Título de la app ahora en letra cursiva
+- Reproductor de audio minimalista con barra de progreso superior
+- Colores del reproductor invertidos (dorado en fondo, blanco en controles)
+- Interfaz completamente responsive optimizada para todos los tamaños de pantalla
+- Vista previa de ajustes actualizada con texto relevante del himno #8
+
+### 🐛 Corregido (Bug Fixes)
+
+- Formato del logo corregido de SVG a PNG para visualización correcta
+- Zoom y movimientos táctiles no deseados deshabilitados en dispositivos móviles
+- Logo ahora visible tanto en HomeScreen como en AppBar
+- Botones duplicados eliminados en panel de búsqueda por número
+- Problemas de responsive con tamaños de letra grandes del sistema
+
 ## [1.0.0] - 2026-01-24
 
 ### ✨ Características Principales (Major Update)
@@ -35,17 +66,6 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 - Prevención de zoom no deseado
 - Ajustes responsive en todos los componentes
 - Corrección de errores de TypeScript
-
-### 🎯 Próximas Versiones
-
-#### [1.1.0] - Planificado
-- Más himnos agregados al repertorio
-- Búsqueda por categorías
-- Modo oscuro mejorado
-
-#### [1.0.1] - Planificado
-- Optimizaciones de rendimiento
-- Correcciones menores de UI
 
 ---
 

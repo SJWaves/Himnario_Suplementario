@@ -173,16 +173,24 @@ export function HymnDetailScreen({
 
           {/* Verses */}
           <div className="space-y-8">
-            {hymn.verses.map((verse: string, index: number) => (
-              <div key={index} className="text-center">
-                <p
-                  className={`${font} ${getTextColor()} whitespace-pre-line leading-relaxed`}
-                  style={{ fontSize: `${fontSize}px`, lineHeight: "1.8" }}
-                >
-                  {verse}
-                </p>
-              </div>
-            ))}
+            {hymn.verses.map((verse: string, index: number) => {
+              // Detectar si es un coro (marcado con *Coro*)
+              const isChorus = verse.trim().startsWith('*Coro*');
+              const verseText = isChorus ? verse.replace('*Coro*', 'Coro') : verse;
+              
+              return (
+                <div key={index} className="text-center">
+                  <p
+                    className={`${font} ${getTextColor()} whitespace-pre-line leading-relaxed ${
+                      isChorus ? 'italic font-medium' : ''
+                    }`}
+                    style={{ fontSize: `${fontSize}px`, lineHeight: "1.8" }}
+                  >
+                    {verseText}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
