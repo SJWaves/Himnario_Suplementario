@@ -173,7 +173,7 @@ export function SettingsScreen({
                 } whitespace-pre-line`}
                 style={{ fontSize: `${fontSize}px`, lineHeight: "1.8" }}
               >
-                Alabaré, alabaré,{"\n"}Alabaré a mi Señor.
+                Hubo quien por mis culpas muriera en la cruz,{"\n"}Aunque indigno y vil como soy.
               </p>
             </div>
           </div>

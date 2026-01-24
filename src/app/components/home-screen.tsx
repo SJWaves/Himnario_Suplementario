@@ -19,13 +19,13 @@ export function HomeScreen({ onSearchByNumber, onSearchByName }: HomeScreenProps
         }}
       />
 
-      <div className="z-10 flex-1 flex flex-col items-center justify-center gap-4 sm:gap-6 w-full max-w-md py-6">
+      <div className="z-10 flex-1 flex flex-col items-center justify-center gap-6 sm:gap-8 w-full max-w-lg py-8">
         {/* Church Logo */}
-        <div className="flex justify-center mb-2">
+        <div className="flex justify-center mb-4">
           <img 
             src="/logo.png" 
             alt="Iglesia Cristiana Bíblica de Fusagasugá" 
-            className="w-24 h-24 sm:w-32 sm:h-32 object-contain"
+            className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-contain"
             onError={(e) => {
               e.currentTarget.style.display = 'none';
             }}
@@ -33,19 +33,21 @@ export function HomeScreen({ onSearchByNumber, onSearchByName }: HomeScreenProps
         </div>
 
         {/* App Title */}
-        <h1 className="text-center font-['Roboto'] text-[18px] sm:text-[24px] text-[#000000] mb-2">
-          Himnario Suplementario - ICB Fusagasugá
+        <h1 className="text-center font-['Lora'] text-2xl sm:text-3xl md:text-4xl text-[#000000] italic font-medium mb-4">
+          Himnario Suplementario
+          <br />
+          <span className="text-xl sm:text-2xl md:text-3xl">ICB Fusagasugá</span>
         </h1>
 
         {/* Search by Number Button */}
         <button
           onClick={onSearchByNumber}
-          className="bg-white border-2 border-[#C9A958] rounded-lg p-5 sm:p-8 shadow-md hover:shadow-lg hover:bg-[#C9A958]/5 transition-all flex flex-col items-center gap-3 sm:gap-4 group"
+          className="w-full bg-white border-2 border-[#C9A958] rounded-xl p-6 sm:p-8 md:p-10 shadow-lg hover:shadow-xl hover:bg-[#C9A958]/5 transition-all flex flex-col items-center gap-4 sm:gap-5 group"
         >
-          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#C9A958] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-            <Hash className="w-6 h-6 sm:w-8 sm:h-8 text-black" />
+          <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-[#C9A958] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
+            <Hash className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-black" />
           </div>
-          <span className="font-['Roboto'] text-[16px] sm:text-[18px] text-[#000000]">
+          <span className="font-['Roboto'] text-lg sm:text-xl md:text-2xl text-[#000000] font-medium">
             Buscar por Número
           </span>
         </button>
@@ -53,12 +55,12 @@ export function HomeScreen({ onSearchByNumber, onSearchByName }: HomeScreenProps
         {/* Search by Name Button */}
         <button
           onClick={onSearchByName}
-          className="bg-white border-2 border-[#C9A958] rounded-lg p-5 sm:p-8 shadow-md hover:shadow-lg hover:bg-[#C9A958]/5 transition-all flex flex-col items-center gap-3 sm:gap-4 group"
+          className="w-full bg-white border-2 border-[#C9A958] rounded-xl p-6 sm:p-8 md:p-10 shadow-lg hover:shadow-xl hover:bg-[#C9A958]/5 transition-all flex flex-col items-center gap-4 sm:gap-5 group"
         >
-          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#C9A958] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-            <Search className="w-6 h-6 sm:w-8 sm:h-8 text-black" />
+          <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-[#C9A958] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
+            <Search className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-black" />
           </div>
-          <span className="font-['Roboto'] text-[16px] sm:text-[18px] text-[#000000]">
+          <span className="font-['Roboto'] text-lg sm:text-xl md:text-2xl text-[#000000] font-medium">
             Buscar por Nombre
           </span>
         </button>

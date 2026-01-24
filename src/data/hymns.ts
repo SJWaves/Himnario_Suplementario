@@ -100,7 +100,7 @@ export const hymnsData: Hymn[] = [
       "Hubo quien por mis culpas muriera en la cruz,\nAunque indigno y vil como soy.\nSoy feliz, pues su sangre vertió mi Jesús,\nY con ella mis culpas borró.",
       "\nCoro\n",
       "Mis pecados llevó, en la cruz do murió\nEl sublime, el tierno Jesús.\nLos desprecios sufrió, y mi alma salvó.\nÉl cambió mis tinieblas en luz.\n",
-      "Él es tierno y amante cual nadie lo fue,\nPues convierte al infiel corazón.\nY por esa paciencia y ternura yo sé\nQue soy libre de condenación.",
+      "\nÉl es tierno y amante cual nadie lo fue,\nPues convierte al infiel corazón.\nY por esa paciencia y ternura yo sé\nQue soy libre de condenación.",
       "Es mi anhelo constante a Cristo seguir.\nMi camino su ejemplo marcó.\nY por darme la vida Él quiso morir.\nEn la cruz mi pecado clavó."
     ],
     audioUrl: "/audio/8.mp3",
