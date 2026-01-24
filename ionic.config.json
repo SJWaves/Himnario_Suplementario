@@ -1,0 +1,8 @@
+{
+  "name": "Himnario Suplementario",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom",
+  "id": "himnario-suplementario"
+}

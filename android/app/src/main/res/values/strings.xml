@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Himnario Suplementario</string>
+    <string name="title_activity_main">Himnario Suplementario</string>
+    <string name="package_name">com.icbfusa.himnario</string>
+    <string name="custom_url_scheme">com.icbfusa.himnario</string>
+</resources>

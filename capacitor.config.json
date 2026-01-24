@@ -1,0 +1,16 @@
+{
+  "appId": "com.icbfusa.himnario",
+  "appName": "Himnario Suplementario",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "backgroundColor": "#000000",
+      "showSpinner": false
+    }
+  },
+  "server": {
+    "androidScheme": "https"
+  }
+}
