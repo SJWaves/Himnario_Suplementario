@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { toast, Toaster } from "sonner";
+import { App as CapacitorApp } from "@capacitor/app";
 import { AppBar } from "./components/app-bar";
 import { HomeScreen } from "./components/home-screen";
 import { NumberSearchModal } from "./components/number-search-modal";
@@ -60,6 +61,39 @@ export default function App() {
   useEffect(() => {
     localStorage.setItem("hymnario-colormode", colorMode);
   }, [colorMode]);
+
+  // Manejar el botón de atrás de Android y gestos de navegación
+  useEffect(() => {
+    const handleBackButton = () => {
+      // Si hay un modal abierto, cerrarlo
+      if (isNumberModalOpen) {
+        setIsNumberModalOpen(false);
+        return;
+      }
+      
+      if (isSideMenuOpen) {
+        setIsSideMenuOpen(false);
+        return;
+      }
+
+      // Si estamos en home, salir de la app
+      if (currentScreen === "home") {
+        CapacitorApp.exitApp();
+        return;
+      }
+
+      // En cualquier otra pantalla, volver a home
+      handleGoHome();
+    };
+
+    // Registrar el listener para el botón de atrás
+    CapacitorApp.addListener("backButton", handleBackButton);
+
+    // Cleanup
+    return () => {
+      CapacitorApp.removeAllListeners();
+    };
+  }, [currentScreen, isNumberModalOpen, isSideMenuOpen]);
 
   const handleSearchByNumber = (number: number) => {
     const hymn = hymnsData.find(h => h.id === number);

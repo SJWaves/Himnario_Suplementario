@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Play, Pause } from "lucide-react";
+import { App as CapacitorApp } from "@capacitor/app";
 
 interface AudioPlayerProps {
   audioUrl: string;
@@ -52,22 +53,24 @@ export function AudioPlayer({ audioUrl, colorMode }: AudioPlayerProps) {
     window.addEventListener("beforeunload", handleBeforeUnload);
 
     // Para Capacitor (apps nativas)
+    let appStateListener: any;
     if (window.Capacitor) {
-      import("@capacitor/app").then(({ App }) => {
-        App.addListener("appStateChange", ({ isActive }) => {
-          if (!isActive && audioRef.current && isPlaying) {
-            audioRef.current.pause();
-            setIsPlaying(false);
-          }
-        });
-      }).catch(() => {
-        // Si @capacitor/app no está disponible, simplemente continuamos
+      CapacitorApp.addListener("appStateChange", ({ isActive }) => {
+        if (!isActive && audioRef.current && isPlaying) {
+          audioRef.current.pause();
+          setIsPlaying(false);
+        }
+      }).then(listener => {
+        appStateListener = listener;
       });
     }
 
     return () => {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
       window.removeEventListener("beforeunload", handleBeforeUnload);
+      if (appStateListener) {
+        appStateListener.remove();
+      }
     };
   }, [isPlaying]);
 
