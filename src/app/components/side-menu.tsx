@@ -79,22 +79,22 @@ export function SideMenu({
           </button>
 
           <button
-            onClick={handleAbout}
-            className="w-full px-6 py-4 flex items-center gap-4 hover:bg-gray-100 transition-colors border-b border-gray-200"
-          >
-            <Info className="w-5 h-5 text-[#C9A958]" />
-            <span className="font-['Roboto'] text-[16px] text-[#333333]">
-              Acerca de
-            </span>
-          </button>
-
-          <button
             onClick={handleSettings}
             className="w-full px-6 py-4 flex items-center gap-4 hover:bg-gray-100 transition-colors border-b border-gray-200"
           >
             <Settings className="w-5 h-5 text-[#C9A958]" />
             <span className="font-['Roboto'] text-[16px] text-[#333333]">
               Ajustes
+            </span>
+          </button>
+
+          <button
+            onClick={handleAbout}
+            className="w-full px-6 py-4 flex items-center gap-4 hover:bg-gray-100 transition-colors border-b border-gray-200"
+          >
+            <Info className="w-5 h-5 text-[#C9A958]" />
+            <span className="font-['Roboto'] text-[16px] text-[#333333]">
+              Acerca de
             </span>
           </button>
         </div>

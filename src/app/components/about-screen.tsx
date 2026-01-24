@@ -1,4 +1,4 @@
-import { ArrowLeft, ExternalLink, Book, Church, Code } from "lucide-react";
+import { ArrowLeft, ExternalLink, Book, Church, Code, Youtube } from "lucide-react";
 
 interface AboutScreenProps {
   onBack: () => void;
@@ -81,15 +81,26 @@ export function AboutScreen({ onBack }: AboutScreenProps) {
                 a Dios a través de la enseñanza expositiva de Su Palabra, la comunión fraterna 
                 y el servicio en amor.
               </p>
-              <a
-                href="https://www.icbfusa.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-[#C9A958] hover:bg-[#B8984A] text-white rounded-lg transition-colors font-['Roboto'] text-[14px] sm:text-[15px] mt-3"
-              >
-                <span>Visitar sitio web</span>
-                <ExternalLink className="w-4 h-4" />
-              </a>
+              <div className="flex flex-wrap gap-3 mt-4">
+                <a
+                  href="https://www.icbfusa.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-[#C9A958] hover:bg-[#B8984A] text-white rounded-lg transition-colors font-['Roboto'] text-[14px] sm:text-[15px]"
+                >
+                  <span>Visitar sitio web</span>
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+                <a
+                  href="https://www.youtube.com/@ICBFusa/featured"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors font-['Roboto'] text-[14px] sm:text-[15px]"
+                >
+                  <Youtube className="w-4 h-4" />
+                  <span>Canal de YouTube</span>
+                </a>
+              </div>
             </div>
           </section>
 
@@ -103,7 +114,7 @@ export function AboutScreen({ onBack }: AboutScreenProps) {
             </div>
             <div className="bg-gray-50 border-l-4 border-[#C9A958] p-5 rounded-r-lg space-y-3">
               <p className="font-['Roboto'] text-[14px] sm:text-[15px] text-[#555555] leading-relaxed">
-                Esta aplicación fue diseñada y desarrollada con dedicación por <strong className="text-[#C9A958]">Sara</strong>, 
+                Esta aplicación fue diseñada y desarrollada con dedicación por <strong className="text-[#C9A958]">Sara Martínez</strong>, 
                 como una herramienta de servicio para facilitar la adoración congregacional y 
                 glorificar a Dios a través de la música sagrada.
               </p>

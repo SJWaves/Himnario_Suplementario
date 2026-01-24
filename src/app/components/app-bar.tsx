@@ -17,7 +17,7 @@ export function AppBar({ onMenuClick }: AppBarProps) {
       <div className="flex-1 flex items-center justify-center gap-2 sm:gap-3 min-w-0">
         <img 
           src="/logo.svg" 
-          alt="Logo" 
+          alt="Logo ICB Fusagasugá" 
           className="h-8 sm:h-10 w-auto flex-shrink-0"
           onError={(e) => {
             e.currentTarget.style.display = 'none';
