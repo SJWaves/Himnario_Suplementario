@@ -18,7 +18,7 @@ export const hymnsData: Hymn[] = [
       "\nRiquezas vanas no anhelo, Señor,\nNi el vano halago de la adulación;\nTú eres mi herencia y Tú mi porción,\nRey de los cielos, tesoro mejor.\n",
       "\nOh Rey de gloria, del triunfo al final,\nGuíame al cielo a morar en Tu hogar;\nLuz de mi alma mi dueño y Señor,\nEn vida o muerte, sé Tú mi visión."
     ],
-    audioUrl: "/audio/1.mp3",
+    audioUrl: `${import.meta.env.BASE_URL}audio/1.mp3`,
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ export const hymnsData: Hymn[] = [
       "\nJesús, Te necesito, pues ciego soy sin Ti,\nMi mente es necia y débil; errante voy aquí\nLa senda es peligrosa: me es menester Tu luz\nQue guía a salvo al cielo, do Te veré, Jesús.\n",
       "\nEspero verte pronto, sentado en potestad,\nEnvuelto en arcoiris, en gloria y majestad,\nCon los que redimiste por sangre, oh Señor\nMi gozo está en loarte, Jesús mi Salvador.\n"
     ],
-    audioUrl: "/audio/2.mp3",
+    audioUrl: `${import.meta.env.BASE_URL}audio/2.mp3`,
   },
   {
     id: 3,
@@ -54,7 +54,7 @@ export const hymnsData: Hymn[] = [
       "\nCuando he caído en tentación\nY al sentir condenación\nAl ver al cielo encontraré\nAl inocente quien murió.\nY por Su muerte el Salvador\nYa mi pecado perdonó\nPues Dios, el justo, aceptó\nSu sacrificio hecho por mí,\nSu sacrificio hecho por mí.\n",
       "\nHe aquí el Cordero Redentor,\nQuién al morir resucitó,\nEl inmutable gran Yo Soy,\nEl Rey de gloria y majestad.\nUnido a Él no moriré,\nPues con Su sangre me compró;\nMi vida escondida está\nEn Cristo Dios mi Salvador,\nEn Cristo Dios mi Salvador.\n"
     ],
-    audioUrl: "/audio/4.mp3",
+    audioUrl: `${import.meta.env.BASE_URL}audio/4.mp3`,
   },
   {
     id: 5,
@@ -66,7 +66,7 @@ export const hymnsData: Hymn[] = [
       "\nQue busquemos cada día\nSolo el reino del Señor,\nY entreguemos nuestra vida,\nComo ofrenda de amor.\nSolo en Él nos gloriaremos,\nNada más importará;\nCristo salva, Él lo ha dicho,\nSolo en Él hay libertad.\n",
       "\nSu Palabra es mi guía\nY me guía a no pecar;\nEn mi Cristo yo confío,\nNada en Él me ha de faltar.\nDe Su plenitud derrama\nSu amor y Su poder,\nEn mi ser y sin medida,\nAl rendirme a Sus pies.\n"
     ],
-    audioUrl: "/audio/5.mp3",
+    audioUrl: `${import.meta.env.BASE_URL}audio/5.mp3`,
   },
   {
     id: 6,
@@ -78,7 +78,7 @@ export const hymnsData: Hymn[] = [
       "\nMira en la cruz la gracia y el perdón, donde el Hijo fue inmolado;\nMas aplastados yacen a los pies del Señor Sus enemigos.\nConquistador, Se levantó, es Cristo quien resucitó;\nSe cantará Su triunfo hasta que todo ojo pueda verlo.\n",
       "\nSu Espíritu nos llene de valor, nos dé fuerza a cada paso.\nNos dé la fe para el premio obtener de un siervo fiel y bueno.\nLos santos que lucharon ya celebran Su fidelidad;\nDios les guardó y así nos guardará hasta estar con Él en gloria.\n"
     ],
-    audioUrl: "/audio/6.mp3",
+    audioUrl: `${import.meta.env.BASE_URL}audio/6.mp3`,
   },
   {
     id: 7,
@@ -90,7 +90,7 @@ export const hymnsData: Hymn[] = [
       "\nEn un sepulcro, Él yació, el cuerpo inerte del Señor.\nMas el tercer día llegó: ¡resucitó en gloriosa luz!\nY al triunfar sobre el mal, perdió el pecado potestad.\nDe Él suyo soy, Él mío es, pues con Su sangre me compró.\n",
       "\nDesde el nacer hasta el morir, sea el poder de Cristo en mí.\nNo temeré, seguro estoy, mi vida yo a Él le doy.\nNingún poder, ningún afán de Él me arrebatará.\nHasta que Él venga otra vez, en Su poder me sostendrá.\n"
     ],
-    audioUrl: "/audio/7.mp3",
+    audioUrl: `${import.meta.env.BASE_URL}audio/7.mp3`,
   },
   {
     id: 8,
@@ -102,7 +102,7 @@ export const hymnsData: Hymn[] = [
       "\nÉl es tierno y amante cual nadie lo fue,\nPues convierte al infiel corazón.\nY por esa paciencia y ternura yo sé\nQue soy libre de condenación.\n",
       "\nEs mi anhelo constante a Cristo seguir.\nMi camino su ejemplo marcó.\nY por darme la vida Él quiso morir.\nEn la cruz mi pecado clavó.\n"
     ],
-    audioUrl: "/audio/8.mp3",
+    audioUrl: `${import.meta.env.BASE_URL}audio/8.mp3`,
   },
   {
     id: 9,
@@ -116,7 +116,7 @@ export const hymnsData: Hymn[] = [
       "\nPor Tu Iglesia universal que no cesa de rendir\nsu tributo de oración y de gratitud a Ti;\nTe ofrecemos, oh Señor, alabanzas con fervor.\n",
       "\nPor las dádivas sin par que en el Salvador nos das:\ndel pecado remisión, santidad y vida y paz;\nTe ofrecemos, oh Señor, alabanzas con fervor.\n"
     ],
-    audioUrl: "/audio/9.mp4",
+    audioUrl: `${import.meta.env.BASE_URL}audio/9.mp4`,
   },
   {
     id: 10,
@@ -125,6 +125,6 @@ export const hymnsData: Hymn[] = [
     verses: [
       "//A Dios el Padre Celestial,\nAl Hijo nuestro Redentor,\nY al Eternal Consolador,\nUnidos todos alabad.//\nAmén."
     ],
-    audioUrl: "/audio/10.mp3",
+    audioUrl: `${import.meta.env.BASE_URL}audio/10.mp3`,
   },
 ];
