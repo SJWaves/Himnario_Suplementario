@@ -16,10 +16,11 @@ export function AppBar({ onMenuClick }: AppBarProps) {
       </button>
       <div className="flex-1 flex items-center justify-center gap-2 sm:gap-3 min-w-0">
         <img 
-          src="/logo.svg" 
+          src="/logo.png" 
           alt="Logo ICB Fusagasugá" 
-          className="h-8 sm:h-10 w-auto flex-shrink-0"
+          className="h-8 sm:h-10 w-auto flex-shrink-0 object-contain"
           onError={(e) => {
+            console.error('Error loading logo');
             e.currentTarget.style.display = 'none';
           }}
         />
