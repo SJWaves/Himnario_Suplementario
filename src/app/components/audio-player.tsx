@@ -31,6 +31,46 @@ export function AudioPlayer({ audioUrl, colorMode }: AudioPlayerProps) {
     };
   }, []);
 
+  // Pausar audio cuando la app se va al background o se cierra la pestaña
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.hidden && audioRef.current && isPlaying) {
+        audioRef.current.pause();
+        setIsPlaying(false);
+      }
+    };
+
+    const handleBeforeUnload = () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+      }
+    };
+
+    // Para navegadores web
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    // Para Capacitor (apps nativas)
+    if (window.Capacitor) {
+      import("@capacitor/app").then(({ App }) => {
+        App.addListener("appStateChange", ({ isActive }) => {
+          if (!isActive && audioRef.current && isPlaying) {
+            audioRef.current.pause();
+            setIsPlaying(false);
+          }
+        });
+      }).catch(() => {
+        // Si @capacitor/app no está disponible, simplemente continuamos
+      });
+    }
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, [isPlaying]);
+
   const togglePlay = () => {
     if (audioRef.current) {
       if (isPlaying) {

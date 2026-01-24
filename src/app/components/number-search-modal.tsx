@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, Delete } from "lucide-react";
+import { X, Delete, Search, Hash } from "lucide-react";
 
 interface NumberSearchModalProps {
   isOpen: boolean;
@@ -33,15 +33,24 @@ export function NumberSearchModal({ isOpen, onClose, onSearch }: NumberSearchMod
     }
   };
 
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && input) {
+      handleSearch();
+    }
+  };
+
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-lg w-full max-w-[360px] sm:max-w-sm overflow-hidden shadow-xl mx-auto">
+      <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl w-full max-w-[380px] sm:max-w-md overflow-hidden shadow-2xl mx-auto border border-[#C9A958]/20">
         {/* Header */}
-        <div className="bg-[#000000] text-white px-4 py-3 flex items-center justify-between flex-shrink-0">
-          <h2 className="font-['Roboto'] text-[16px] sm:text-[18px]">Buscar Himno</h2>
+        <div className="bg-gradient-to-r from-[#000000] to-[#1a1a1a] text-white px-5 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Hash className="w-5 h-5 text-[#C9A958]" />
+            <h2 className="font-['Roboto'] text-[17px] sm:text-[19px] font-medium">Buscar por Número</h2>
+          </div>
           <button
             onClick={onClose}
-            className="p-1 hover:bg-[#C9A958]/20 rounded transition-colors flex-shrink-0"
+            className="p-1.5 hover:bg-[#C9A958]/20 rounded-lg transition-colors flex-shrink-0"
             aria-label="Cerrar"
           >
             <X className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -49,53 +58,72 @@ export function NumberSearchModal({ isOpen, onClose, onSearch }: NumberSearchMod
         </div>
 
         {/* Display */}
-        <div className="bg-white px-4 sm:px-6 py-6 sm:py-8 border-b border-gray-200">
-          <div className="bg-white border-2 border-[#C9A958] rounded-lg px-3 sm:px-4 py-3 sm:py-4 min-h-[50px] sm:min-h-[60px] flex items-center justify-end">
-            <span className="font-['Roboto'] text-[28px] sm:text-[32px] text-[#333333]">
-              {input || "0"}
-            </span>
+        <div className="bg-gradient-to-b from-white to-gray-50 px-5 sm:px-6 py-6 sm:py-7">
+          <div className="relative">
+            <div className="absolute left-3 top-1/2 -translate-y-1/2">
+              <Hash className="w-5 h-5 text-[#C9A958]" />
+            </div>
+            <input
+              type="text"
+              inputMode="numeric"
+              value={input}
+              onChange={(e) => {
+                const value = e.target.value.replace(/[^0-9]/g, '');
+                setInput(value);
+              }}
+              onKeyPress={handleKeyPress}
+              placeholder="Ingrese número..."
+              className="w-full bg-white border-2 border-[#C9A958] rounded-xl pl-11 pr-4 py-4 text-center font-['Roboto'] text-[28px] sm:text-[32px] text-[#333333] focus:outline-none focus:border-[#B8984A] focus:ring-2 focus:ring-[#C9A958]/20 transition-all shadow-sm"
+            />
           </div>
+          <p className="text-center text-[12px] sm:text-[13px] text-gray-500 font-['Roboto'] mt-3">
+            Ingrese el número del himno que desea buscar
+          </p>
         </div>
 
         {/* Numpad */}
-        <div className="p-3 sm:p-4 grid grid-cols-3 gap-2 sm:gap-3">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(num => (
+        <div className="px-4 sm:px-5 pb-4">
+          <div className="grid grid-cols-3 gap-2.5 sm:gap-3 mb-3">
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(num => (
+              <button
+                key={num}
+                onClick={() => handleNumberClick(num.toString())}
+                className="bg-white hover:bg-[#C9A958] active:bg-[#B8984A] border-2 border-gray-200 hover:border-[#C9A958] rounded-xl py-4 sm:py-5 font-['Roboto'] text-[22px] sm:text-[26px] font-medium text-[#333333] hover:text-white transition-all duration-200 touch-manipulation shadow-sm hover:shadow-md"
+              >
+                {num}
+              </button>
+            ))}
+          </div>
+          
+          <div className="grid grid-cols-3 gap-2.5 sm:gap-3 mb-4">
             <button
-              key={num}
-              onClick={() => handleNumberClick(num.toString())}
-              className="bg-white hover:bg-[#C9A958]/10 active:bg-[#C9A958]/20 border border-gray-300 rounded-lg py-3 sm:py-4 font-['Roboto'] text-[20px] sm:text-[24px] text-[#333333] transition-colors touch-manipulation"
+              onClick={handleClear}
+              className="bg-gradient-to-br from-red-50 to-red-100 hover:from-red-100 hover:to-red-200 active:from-red-200 active:to-red-300 border-2 border-red-200 rounded-xl py-3 sm:py-4 font-['Roboto'] text-[15px] sm:text-[17px] font-medium text-red-700 transition-all duration-200 touch-manipulation shadow-sm hover:shadow-md"
             >
-              {num}
+              Limpiar
             </button>
-          ))}
-          <button
-            onClick={handleClear}
-            className="bg-white hover:bg-red-50 active:bg-red-100 border border-gray-300 rounded-lg py-3 sm:py-4 font-['Roboto'] text-[16px] sm:text-[18px] text-red-600 transition-colors touch-manipulation"
-          >
-            C
-          </button>
-          <button
-            onClick={() => handleNumberClick("0")}
-            className="bg-white hover:bg-[#C9A958]/10 active:bg-[#C9A958]/20 border border-gray-300 rounded-lg py-3 sm:py-4 font-['Roboto'] text-[20px] sm:text-[24px] text-[#333333] transition-colors touch-manipulation"
-          >
-            0
-          </button>
-          <button
-            onClick={handleDelete}
-            className="bg-white hover:bg-orange-50 active:bg-orange-100 border border-gray-300 rounded-lg py-3 sm:py-4 flex items-center justify-center transition-colors touch-manipulation"
-          >
-            <Delete className="w-5 h-5 sm:w-6 sm:h-6 text-[#333333]" />
-          </button>
-        </div>
+            <button
+              onClick={() => handleNumberClick("0")}
+              className="bg-white hover:bg-[#C9A958] active:bg-[#B8984A] border-2 border-gray-200 hover:border-[#C9A958] rounded-xl py-3 sm:py-4 font-['Roboto'] text-[22px] sm:text-[26px] font-medium text-[#333333] hover:text-white transition-all duration-200 touch-manipulation shadow-sm hover:shadow-md"
+            >
+              0
+            </button>
+            <button
+              onClick={handleDelete}
+              className="bg-gradient-to-br from-orange-50 to-orange-100 hover:from-orange-100 hover:to-orange-200 active:from-orange-200 active:to-orange-300 border-2 border-orange-200 rounded-xl py-3 sm:py-4 flex items-center justify-center transition-all duration-200 touch-manipulation shadow-sm hover:shadow-md"
+            >
+              <Delete className="w-5 h-5 sm:w-6 sm:h-6 text-orange-700" />
+            </button>
+          </div>
 
-        {/* Search Button */}
-        <div className="p-3 sm:p-4 pt-0">
+          {/* Search Button */}
           <button
             onClick={handleSearch}
             disabled={!input}
-            className="w-full bg-[#C9A958] hover:bg-[#B8984A] active:bg-[#A88739] disabled:bg-gray-300 disabled:cursor-not-allowed text-black py-3 sm:py-4 rounded-lg font-['Roboto'] text-[16px] sm:text-[18px] transition-colors touch-manipulation"
+            className="w-full bg-gradient-to-r from-[#C9A958] to-[#B8984A] hover:from-[#B8984A] hover:to-[#A88739] active:from-[#A88739] active:to-[#988736] disabled:from-gray-300 disabled:to-gray-400 disabled:cursor-not-allowed text-white py-4 sm:py-5 rounded-xl font-['Roboto'] text-[17px] sm:text-[19px] font-medium transition-all duration-200 touch-manipulation shadow-lg hover:shadow-xl disabled:shadow-none flex items-center justify-center gap-2"
           >
-            Buscar
+            <Search className="w-5 h-5" />
+            <span>Buscar Himno</span>
           </button>
         </div>
       </div>
