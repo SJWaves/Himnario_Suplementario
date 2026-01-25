@@ -13,6 +13,7 @@ import { hymnsData } from "@/data/hymns";
 import type { FontFamily } from "./lib/fonts";
 import { DEFAULT_FONT } from "./lib/fonts";
 import { FavoritesScreen } from "./components/favorites-screen";
+import { appStorage } from "./lib/storage";
 
 type Screen = "home" | "name-search" | "hymn-detail" | "settings" | "favorites" | "about";
 
@@ -22,44 +23,44 @@ export default function App() {
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
   const [selectedHymnId, setSelectedHymnId] = useState<number | null>(null);
   
-  // User preferences stored in localStorage
+  // User preferences - usa sessionStorage en web y localStorage en app nativa
   const [favorites, setFavorites] = useState<number[]>(() => {
-    const stored = localStorage.getItem("hymnario-favorites");
+    const stored = appStorage.getItem("hymnario-favorites");
     return stored ? JSON.parse(stored) : [];
   });
   
   const [fontSize, setFontSize] = useState(() => {
-    const stored = localStorage.getItem("hymnario-fontsize");
+    const stored = appStorage.getItem("hymnario-fontsize");
     return stored ? parseInt(stored) : 18;
   });
   
   const [fontFamily, setFontFamily] = useState<FontFamily>(() => {
-    const stored = localStorage.getItem("hymnario-fontfamily");
+    const stored = appStorage.getItem("hymnario-fontfamily");
     const valid: FontFamily[] = ["modern", "classic", "opensans", "merriweather", "playfair", "source"];
     if (stored && valid.includes(stored as FontFamily)) return stored as FontFamily;
     return DEFAULT_FONT;
   });
   
   const [colorMode, setColorMode] = useState<"light" | "dark" | "sepia">(() => {
-    const stored = localStorage.getItem("hymnario-colormode");
+    const stored = appStorage.getItem("hymnario-colormode");
     return (stored as "light" | "dark" | "sepia") || "light";
   });
 
-  // Save preferences to localStorage
+  // Save preferences
   useEffect(() => {
-    localStorage.setItem("hymnario-favorites", JSON.stringify(favorites));
+    appStorage.setItem("hymnario-favorites", JSON.stringify(favorites));
   }, [favorites]);
 
   useEffect(() => {
-    localStorage.setItem("hymnario-fontsize", fontSize.toString());
+    appStorage.setItem("hymnario-fontsize", fontSize.toString());
   }, [fontSize]);
 
   useEffect(() => {
-    localStorage.setItem("hymnario-fontfamily", fontFamily);
+    appStorage.setItem("hymnario-fontfamily", fontFamily);
   }, [fontFamily]);
 
   useEffect(() => {
-    localStorage.setItem("hymnario-colormode", colorMode);
+    appStorage.setItem("hymnario-colormode", colorMode);
   }, [colorMode]);
 
   // Manejar el botón de atrás de Android y gestos de navegación

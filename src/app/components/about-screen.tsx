@@ -114,7 +114,7 @@ export function AboutScreen({ onBack }: AboutScreenProps) {
             </div>
             <div className="bg-gray-50 border-l-4 border-[#C9A958] p-5 rounded-r-lg space-y-3">
               <p className="font-['Roboto'] text-[14px] sm:text-[15px] text-[#555555] leading-relaxed">
-                Esta aplicación fue diseñada y desarrollada con dedicación por <strong className="text-[#C9A958]">Sara Martínez</strong>, 
+                Esta aplicación fue diseñada y desarrollada con dedicación por <strong className="text-[#C9A958]">Sara Julieth Martínez Arias</strong>, 
                 como una herramienta de servicio para facilitar la adoración congregacional y 
                 glorificar a Dios a través de la música sagrada.
               </p>
