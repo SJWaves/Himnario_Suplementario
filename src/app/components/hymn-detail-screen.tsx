@@ -149,7 +149,7 @@ export function HymnDetailScreen({
 
       {/* Content: scrollable area so long hymns + large font don't cut off */}
       <div
-        className="scrollbar-app flex-1 min-h-0 overflow-y-auto overflow-x-hidden overscroll-contain pb-20"
+        className="scrollbar-app flex-1 min-h-0 overflow-y-auto overflow-x-hidden overscroll-contain pb-32"
         style={{ WebkitOverflowScrolling: 'touch' }}
       >
         <div className="px-6 py-8 max-w-3xl mx-auto">
