@@ -7,7 +7,7 @@ interface HomeScreenProps {
 
 export function HomeScreen({ onSearchByNumber, onSearchByName }: HomeScreenProps) {
   return (
-    <div className="scrollbar-app flex-1 min-h-0 bg-white flex flex-col items-center justify-center px-4 sm:px-6 relative overflow-hidden">
+    <div className="scrollbar-app flex-1 min-h-0 bg-white flex flex-col items-center px-4 sm:px-6 pt-8 sm:pt-12 pb-6 relative overflow-hidden">
       {/* Background decorative element */}
       <div 
         className="absolute inset-0 flex items-center justify-center opacity-5"
@@ -19,13 +19,13 @@ export function HomeScreen({ onSearchByNumber, onSearchByName }: HomeScreenProps
         }}
       />
 
-      <div className="z-10 flex flex-col items-center justify-center gap-3 sm:gap-4 w-full max-w-lg">
+      <div className="z-10 flex flex-col items-center gap-3 sm:gap-4 w-full max-w-lg">
         {/* Hymnal Logo */}
         <div className="flex justify-center">
           <img 
             src={`${import.meta.env.BASE_URL}Logo_Himnario.png`}
             alt="Himnario Suplementario" 
-            className="w-36 h-36 sm:w-40 sm:h-40 md:w-44 md:h-44 object-contain"
+            className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-contain"
             onError={(e) => {
               e.currentTarget.style.display = 'none';
             }}
@@ -33,7 +33,7 @@ export function HomeScreen({ onSearchByNumber, onSearchByName }: HomeScreenProps
         </div>
 
         {/* App Title */}
-        <h1 className="text-center font-['Lora'] text-xl sm:text-2xl md:text-3xl text-[#000000] italic font-medium">
+        <h1 className="text-center font-['Lora'] text-xl sm:text-2xl md:text-3xl text-[#000000] italic font-medium -mt-1">
           Himnario Suplementario
           <br />
           <span className="text-lg sm:text-xl md:text-2xl">ICB Fusagasugá</span>
