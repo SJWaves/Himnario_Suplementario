@@ -5,6 +5,40 @@ Todos los cambios notables en este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
+## [1.1.1] - 2026-01-26
+
+### ✨ Añadido (New Features)
+
+- **Logos institucionales**: Logo_Himnario en pantalla principal y Logo_Iglesia en sección "Acerca de - Nuestra Iglesia"
+- **Reinicio automático**: El input del modal de búsqueda se reinicia al cerrar la ventana
+
+### 🎨 Mejorado (Improvements)
+
+- **Texto justificado**: Letra de himnos y textos de "Acerca de" con alineación justificada para mejor legibilidad
+- **Diseño del numpad**: Botones estilo iPhone con bordes grises, degradados suaves y sombras sutiles
+- **Feedback visual**: Los botones del numpad se iluminan en dorado (#C9A958) al presionarlos
+- **Espaciado mejorado**: Pantalla de inicio mejor centrada verticalmente con espaciado responsive
+- **Padding inferior aumentado**: pb-32 (128px) en todas las pantallas con scroll para evitar que barras de navegación oculten contenido
+- **Logo más grande**: Tamaño del logo incrementado en pantalla principal para mejor visibilidad
+- **Persistencia de datos**: Cambio definitivo a localStorage para guardar configuraciones permanentemente (favoritos, fuente, tamaño, modo de color)
+
+### 🔧 Configuración (Configuration)
+
+- **GitHub Pages**: Configurado base path `/Himnario_Suplementario/` para deployment correcto
+- **Assets dinámicos**: Rutas de audio y logos con `import.meta.env.BASE_URL` para funcionar en cualquier entorno
+- **GitHub Actions**: Workflow automatizado para build y deploy en cada push a master
+- **Storage adapter**: Sistema de almacenamiento unificado usando localStorage para web y app
+- **CNAME**: Configuración de dominio personalizado para GitHub Pages
+
+### 🐛 Corregido (Bug Fixes)
+
+- Rutas de audio corregidas para funcionar en GitHub Pages
+- Rutas de logos actualizadas con base path correcto
+- Error de tipeo en padding del modal (`p-49` → `p-4`) que causaba desplazamiento
+- Espaciado excesivo en parte superior de la pantalla principal eliminado
+- Contenido cortado por barra de navegación del navegador en móviles (Brave, Chrome, Safari)
+- Logo sin fondo actualizado para mejor integración visual
+
 ## [1.1.0] - 2026-01-24
 
 ### ✨ Añadido (New Features)

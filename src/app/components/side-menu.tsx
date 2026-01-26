@@ -101,7 +101,7 @@ export function SideMenu({
 
         <div className="px-6 py-4 border-t border-gray-200 bg-gray-50">
           <p className="text-center text-[12px] text-gray-500 font-['Roboto']">
-            Himnario Suplementario v1.1.0
+            Himnario Suplementario v1.1.1
           </p>
         </div>
       </div>
