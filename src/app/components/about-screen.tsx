@@ -67,6 +67,17 @@ export function AboutScreen({ onBack }: AboutScreenProps) {
               </h3>
             </div>
             <div className="bg-gray-50 border-l-4 border-[#C9A958] p-5 rounded-r-lg space-y-3">
+              {/* Church Logo */}
+              <div className="flex justify-center mb-4">
+                <img 
+                  src={`${import.meta.env.BASE_URL}Logo_Iglesia.png`}
+                  alt="Iglesia Cristiana Bíblica de Fusagasugá" 
+                  className="w-24 h-24 sm:w-28 sm:h-28 object-contain"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+              </div>
               <h4 className="font-['Roboto'] text-[16px] sm:text-[18px] text-[#C9A958] font-medium">
                 Iglesia Cristiana Bíblica (ICB) Fusagasugá
               </h4>
