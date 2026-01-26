@@ -1,4 +1,5 @@
 import { ArrowLeft, ExternalLink, Book, Church, Code, Youtube } from "lucide-react";
+import { getAssetUrl } from "../lib/assets";
 
 interface AboutScreenProps {
   onBack: () => void;
@@ -36,7 +37,7 @@ export function AboutScreen({ onBack }: AboutScreenProps) {
                             {/* Hymnal Logo */}
               <div className="flex justify-center mb-4">
                 <img 
-                  src={`${import.meta.env.BASE_URL}Logo_Himnario.png`}
+                  src={getAssetUrl('Logo_Himnario.png')}
                   alt="Himnario Suplementario de Himnos y Cantos Congregacionales" 
                   className="w-28 h-24 sm:w-28 sm:h-28 object-contain"
                   onError={(e) => {
@@ -82,7 +83,7 @@ export function AboutScreen({ onBack }: AboutScreenProps) {
               {/* Church Logo */}
               <div className="flex justify-center mb-4">
                 <img 
-                  src={`${import.meta.env.BASE_URL}Logo_Iglesia.png`}
+                  src={getAssetUrl('Logo_Iglesia.png')}
                   alt="Iglesia Cristiana Bíblica de Fusagasugá" 
                   className="w-28 h-24 sm:w-28 sm:h-28 object-contain"
                   onError={(e) => {
