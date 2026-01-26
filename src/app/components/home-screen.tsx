@@ -7,7 +7,7 @@ interface HomeScreenProps {
 
 export function HomeScreen({ onSearchByNumber, onSearchByName }: HomeScreenProps) {
   return (
-    <div className="scrollbar-app flex-1 min-h-0 bg-white flex flex-col items-center justify-between px-4 sm:px-6 relative overflow-hidden">
+    <div className="scrollbar-app flex-1 min-h-0 bg-white flex flex-col items-center justify-center px-4 sm:px-6 relative overflow-hidden">
       {/* Background decorative element */}
       <div 
         className="absolute inset-0 flex items-center justify-center opacity-5"
@@ -19,7 +19,7 @@ export function HomeScreen({ onSearchByNumber, onSearchByName }: HomeScreenProps
         }}
       />
 
-      <div className="z-10 flex-1 flex flex-col items-center justify-center gap-3 sm:gap-4 w-full max-w-lg py-4">
+      <div className="z-10 flex flex-col items-center justify-center gap-3 sm:gap-4 w-full max-w-lg">
         {/* Hymnal Logo */}
         <div className="flex justify-center">
           <img 
@@ -64,13 +64,13 @@ export function HomeScreen({ onSearchByNumber, onSearchByName }: HomeScreenProps
             Buscar por Nombre
           </span>
         </button>
-      </div>
 
-      {/* Inspirational quote */}
-      <div className="z-10 text-center px-4 pb-4 sm:pb-5">
-        <p className="font-['Lora'] text-[13px] sm:text-[14px] italic text-[#333333]/70">
-          "Canta con gracia en tu corazón"
-        </p>
+        {/* Inspirational quote */}
+        <div className="z-10 text-center px-4 mt-4">
+          <p className="font-['Lora'] text-[13px] sm:text-[14px] italic text-[#333333]/70">
+            "Canta con gracia en tu corazón"
+          </p>
+        </div>
       </div>
     </div>
   );
