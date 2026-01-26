@@ -7,7 +7,7 @@ interface HomeScreenProps {
 
 export function HomeScreen({ onSearchByNumber, onSearchByName }: HomeScreenProps) {
   return (
-    <div className="scrollbar-app flex-1 min-h-0 bg-white flex flex-col items-center px-4 sm:px-6 pt-8 sm:pt-12 pb-6 relative overflow-hidden">
+    <div className="scrollbar-app flex-1 min-h-0 bg-white flex flex-col items-center px-4 sm:px-6 pt-15 sm:pt-30 pb-6 relative overflow-hidden">
       {/* Background decorative element */}
       <div 
         className="absolute inset-0 flex items-center justify-center opacity-5"

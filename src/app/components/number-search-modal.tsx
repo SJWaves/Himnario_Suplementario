@@ -24,6 +24,11 @@ export function NumberSearchModal({ isOpen, onClose, onSearch }: NumberSearchMod
     setInput(prev => prev.slice(0, -1));
   };
 
+  const handleClose = () => {
+    setInput("");
+    onClose();
+  };
+
   const handleSearch = () => {
     const number = parseInt(input);
     if (number > 0) {
@@ -45,11 +50,10 @@ export function NumberSearchModal({ isOpen, onClose, onSearch }: NumberSearchMod
         {/* Header */}
         <div className="bg-[#000000] text-white px-4 sm:px-5 py-3 sm:py-4 flex items-center justify-between">
           <div className="flex items-center gap-2 sm:gap-3">
-            <Hash className="w-5 h-5 sm:w-6 sm:h-6 text-[#C9A958] flex-shrink-0" />
             <h2 className="font-['Roboto'] text-base sm:text-lg md:text-xl font-medium">Buscar Himno</h2>
           </div>
           <button
-            onClick={onClose}
+            onClick={handleClose}
             className="p-1.5 hover:bg-[#C9A958]/20 rounded-lg transition-colors flex-shrink-0"
             aria-label="Cerrar"
           >
@@ -78,14 +82,10 @@ export function NumberSearchModal({ isOpen, onClose, onSearch }: NumberSearchMod
               }}
               onKeyPress={handleKeyPress}
               placeholder="Ingrese número..."
-              className="w-full bg-white border-2 border-[#C9A958] rounded-lg px-3 sm:px-4 py-3 sm:py-4 text-center font-['Roboto'] text-2xl sm:text-3xl md:text-4xl text-[#333333] focus:outline-none focus:border-[#B8984A] focus:ring-2 focus:ring-[#C9A958]/20 transition-all"
+              className="w-full bg-white border-2 border-[#C9A958] rounded-lg px-3 sm:px-4 py-3 sm:py-4 text-center font-['Roboto'] text-1xl sm:text-2xl md:text-1xl text-[#333333] focus:outline-none focus:border-[#B8984A] focus:ring-2 focus:ring-[#C9A958]/20 transition-all"
             />
             
-            <p className="text-center text-xs sm:text-sm text-gray-500 font-['Roboto']">
-              Ingrese el número del himno que desea buscar
-            </p>
           </div>
-
           {/* Number Pad */}
           <div className="space-y-2.5 sm:space-y-3">
             <div className="grid grid-cols-3 gap-2 sm:gap-2.5 md:gap-3">
@@ -93,7 +93,10 @@ export function NumberSearchModal({ isOpen, onClose, onSearch }: NumberSearchMod
                 <button
                   key={num}
                   onClick={() => handleNumberClick(num.toString())}
-                  className="bg-white border-2 border-gray-200 hover:border-[#C9A958] hover:bg-[#C9A958]/5 rounded-xl py-3 sm:py-4 md:py-5 font-['Roboto'] text-xl sm:text-2xl md:text-3xl font-medium text-[#333333] transition-all duration-200 touch-manipulation min-h-[3rem] sm:min-h-[3.5rem]"
+                  className="bg-white border border-gray-300 hover:border-[#C9A958] hover:bg-[#C9A958]/5 active:bg-[#C9A958] active:border-[#C9A958] active:text-white rounded-xl py-3 sm:py-4 md:py-5 font-['Roboto'] text-xl sm:text-2xl md:text-3xl font-medium text-[#333333] transition-all duration-200 touch-manipulation min-h-[3rem] sm:min-h-[3.5rem] shadow-[0_1px_3px_rgba(0,0,0,0.12),0_1px_2px_rgba(0,0,0,0.08)] hover:shadow-[0_2px_4px_rgba(0,0,0,0.15),0_1px_3px_rgba(0,0,0,0.1)] active:shadow-[inset_0_1px_2px_rgba(0,0,0,0.1)]"
+                  style={{
+                    background: 'linear-gradient(to bottom, #ffffff 0%, #f9f9f9 100%)'
+                  }}
                 >
                   {num}
                 </button>
@@ -103,20 +106,23 @@ export function NumberSearchModal({ isOpen, onClose, onSearch }: NumberSearchMod
             <div className="grid grid-cols-3 gap-2 sm:gap-2.5 md:gap-3">
               <button
                 onClick={handleClear}
-                className="bg-white border-2 border-gray-200 hover:border-red-300 hover:bg-red-50 rounded-xl py-3 sm:py-4 font-['Roboto'] text-sm sm:text-base font-medium text-red-600 transition-all duration-200 touch-manipulation"
+                className="bg-red-50 border border-red-300 hover:border-red-400 hover:bg-red-100 active:bg-red-200 rounded-xl py-3 sm:py-4 font-['Roboto'] text-sm sm:text-base font-medium text-red-600 transition-all duration-200 touch-manipulation shadow-[0_1px_3px_rgba(0,0,0,0.12),0_1px_2px_rgba(0,0,0,0.08)] hover:shadow-[0_2px_4px_rgba(0,0,0,0.15),0_1px_3px_rgba(0,0,0,0.1)] active:shadow-[inset_0_1px_2px_rgba(0,0,0,0.1)]"
               >
-                Limpiar
+                Borrar
               </button>
               <button
                 onClick={() => handleNumberClick("0")}
-                className="bg-white border-2 border-gray-200 hover:border-[#C9A958] hover:bg-[#C9A958]/5 rounded-xl py-3 sm:py-4 font-['Roboto'] text-xl sm:text-2xl md:text-3xl font-medium text-[#333333] transition-all duration-200 touch-manipulation"
+                className="bg-white border border-gray-300 hover:border-[#C9A958] hover:bg-[#C9A958]/5 active:bg-[#C9A958] active:border-[#C9A958] active:text-white rounded-xl py-3 sm:py-4 font-['Roboto'] text-xl sm:text-2xl md:text-3xl font-medium text-[#333333] transition-all duration-200 touch-manipulation shadow-[0_1px_3px_rgba(0,0,0,0.12),0_1px_2px_rgba(0,0,0,0.08)] hover:shadow-[0_2px_4px_rgba(0,0,0,0.15),0_1px_3px_rgba(0,0,0,0.1)] active:shadow-[inset_0_1px_2px_rgba(0,0,0,0.1)]"
+                style={{
+                  background: 'linear-gradient(to bottom, #ffffff 0%, #f9f9f9 100%)'
+                }}
               >
                 0
               </button>
               <button
                 onClick={handleSearch}
                 disabled={!input}
-                className="bg-[#C9A958] hover:bg-[#B8984A] active:bg-[#A88739] disabled:bg-gray-300 disabled:cursor-not-allowed text-white rounded-xl py-3 sm:py-4 font-['Roboto'] text-sm sm:text-base font-medium transition-all duration-200 touch-manipulation flex items-center justify-center gap-1.5 shadow-md hover:shadow-lg disabled:shadow-none"
+                className="bg-[#C9A958] hover:bg-[#B8984A] active:bg-[#A88739] disabled:bg-gray-300 disabled:cursor-not-allowed text-white border border-[#B8984A] disabled:border-gray-400 rounded-xl py-3 sm:py-4 font-['Roboto'] text-sm sm:text-base font-medium transition-all duration-200 touch-manipulation flex items-center justify-center gap-1.5 shadow-[0_2px_4px_rgba(0,0,0,0.15),0_1px_3px_rgba(0,0,0,0.1)] hover:shadow-[0_3px_6px_rgba(0,0,0,0.2),0_2px_4px_rgba(0,0,0,0.12)] active:shadow-[inset_0_1px_2px_rgba(0,0,0,0.2)] disabled:shadow-none"
               >
                 <Search className="w-4 h-4 flex-shrink-0" />
                 <span>Buscar</span>

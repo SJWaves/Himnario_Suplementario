@@ -31,13 +31,25 @@ export function AboutScreen({ onBack }: AboutScreenProps) {
                 Sobre el Himnario
               </h3>
             </div>
+
             <div className="bg-gray-50 border-l-4 border-[#C9A958] p-5 rounded-r-lg space-y-3">
+                            {/* Hymnal Logo */}
+              <div className="flex justify-center mb-4">
+                <img 
+                  src={`${import.meta.env.BASE_URL}Logo_Himnario.png`}
+                  alt="Himnario Suplementario de Himnos y Cantos Congregacionales" 
+                  className="w-28 h-24 sm:w-28 sm:h-28 object-contain"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+              </div>
               <h4 className="font-['Roboto'] text-[16px] sm:text-[18px] text-[#C9A958] font-medium">
                 Himnario Suplementario de Himnos y Cantos Congregacionales
               </h4>
-              <p className="font-['Roboto'] text-[14px] sm:text-[15px] text-[#555555] leading-relaxed">
+              <p className="font-['Roboto'] text-[14px] sm:text-[15px] text-[#555555] leading-relaxed text-justify">
                 Este himnario digital ha sido creado con el propósito de facilitar el acceso 
-                a la música de adoración de nuestra congregación. Incluye una selección cuidadosa 
+                a los himnos de adoración de nuestra congregación. Incluye una selección cuidadosa 
                 de himnos clásicos y contemporáneos, cada uno acompañado de sus referencias bíblicas 
                 y respetando los créditos a sus autores y compositores originales.
               </p>
@@ -50,7 +62,7 @@ export function AboutScreen({ onBack }: AboutScreenProps) {
                   — Efesios 5:19
                 </p>
               </div>
-              <p className="font-['Roboto'] text-[13px] sm:text-[14px] text-[#666666] mt-3">
+              <p className="font-['Roboto'] text-[13px] sm:text-[14px] text-[#666666] mt-3 text-justify">
                 <strong>Nota:</strong> Todos los himnos incluidos respetan la propiedad intelectual 
                 de sus autores originales, incluyendo compositores como Thomas Ken, Keith Getty, 
                 Jean Sibelius, entre otros destacados siervos del Señor.
@@ -81,13 +93,13 @@ export function AboutScreen({ onBack }: AboutScreenProps) {
               <h4 className="font-['Roboto'] text-[16px] sm:text-[18px] text-[#C9A958] font-medium">
                 Iglesia Cristiana Bíblica (ICB) Fusagasugá
               </h4>
-              <p className="font-['Roboto'] text-[14px] sm:text-[15px] text-[#555555] leading-relaxed">
+              <p className="font-['Roboto'] text-[14px] sm:text-[15px] text-[#555555] leading-relaxed text-justify">
                 Somos una comunidad de fe dedicada a la exaltación de la gloria de Dios. 
                 Nuestra base es la sana doctrina de las Sagradas Escrituras, enfocándonos en 
                 la adoración reverente, el discipulado bíblico y la proclamación fiel del 
                 Evangelio de Jesucristo.
               </p>
-              <p className="font-['Roboto'] text-[14px] sm:text-[15px] text-[#555555] leading-relaxed">
+              <p className="font-['Roboto'] text-[14px] sm:text-[15px] text-[#555555] leading-relaxed text-justify">
                 Nos congregamos en Fusagasugá, Colombia, con el firme propósito de glorificar 
                 a Dios a través de la enseñanza expositiva de Su Palabra, la comunión fraterna 
                 y el servicio en amor.
@@ -124,10 +136,10 @@ export function AboutScreen({ onBack }: AboutScreenProps) {
               </h3>
             </div>
             <div className="bg-gray-50 border-l-4 border-[#C9A958] p-5 rounded-r-lg space-y-3">
-              <p className="font-['Roboto'] text-[14px] sm:text-[15px] text-[#555555] leading-relaxed">
+              <p className="font-['Roboto'] text-[14px] sm:text-[15px] text-[#555555] leading-relaxed text-justify">
                 Esta aplicación fue diseñada y desarrollada con dedicación por <strong className="text-[#C9A958]">Sara Julieth Martínez Arias</strong>, 
                 como una herramienta de servicio para facilitar la adoración congregacional y 
-                glorificar a Dios a través de la música sagrada.
+                glorificar a Dios a través de himnos solemnes.
               </p>
               <div className="bg-white border border-gray-200 p-4 rounded-lg mt-3">
                 <p className="font-['Roboto'] text-[13px] sm:text-[14px] text-[#666666] text-center">

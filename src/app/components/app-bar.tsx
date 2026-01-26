@@ -16,7 +16,7 @@ export function AppBar({ onMenuClick }: AppBarProps) {
       </button>
       <div className="flex-1 flex items-center justify-center gap-2 sm:gap-3 min-w-0">
         <img 
-          src={`${import.meta.env.BASE_URL}logo.png`}
+          src={`${import.meta.env.BASE_URL}Logo_Himnario_Con_Fondo.png`}
           alt="Logo ICB Fusagasugá" 
           className="h-8 sm:h-10 w-auto flex-shrink-0 object-contain"
           onError={(e) => {
