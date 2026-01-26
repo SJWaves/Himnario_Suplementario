@@ -1,14 +1,11 @@
 import { Capacitor } from '@capacitor/core';
 
 /**
- * Storage adapter que usa localStorage para apps nativas (persistente)
- * y sessionStorage para web (temporal por sesión).
- * 
- * Esto evita que diferentes usuarios compartan configuración en la web,
- * mientras mantiene la personalización en la app móvil.
+ * Storage adapter que usa localStorage para persistencia en web y app nativa.
+ * Las configuraciones se guardan localmente en cada navegador/dispositivo.
  */
 const isNativeApp = Capacitor.isNativePlatform();
-const storage = isNativeApp ? localStorage : sessionStorage;
+const storage = localStorage; // Siempre usa localStorage para persistencia
 
 export const appStorage = {
   getItem: (key: string): string | null => {

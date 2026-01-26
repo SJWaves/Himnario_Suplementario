@@ -72,7 +72,7 @@ export function AboutScreen({ onBack }: AboutScreenProps) {
                 <img 
                   src={`${import.meta.env.BASE_URL}Logo_Iglesia.png`}
                   alt="Iglesia Cristiana Bíblica de Fusagasugá" 
-                  className="w-24 h-24 sm:w-28 sm:h-28 object-contain"
+                  className="w-28 h-24 sm:w-28 sm:h-28 object-contain"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                   }}
