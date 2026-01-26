@@ -23,7 +23,7 @@ export function HomeScreen({ onSearchByNumber, onSearchByName }: HomeScreenProps
         {/* Hymnal Logo */}
         <div className="flex justify-center">
           <img 
-            src={`${import.meta.env.BASE_URL}Logo_Himnario.png`}
+            src={`${import.meta.env.BASE_URL}Logo_Himnario_Sin_Fondo.png`}
             alt="Himnario Suplementario" 
             className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-contain"
             onError={(e) => {
