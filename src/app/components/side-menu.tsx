@@ -57,7 +57,7 @@ export function SideMenu({
           </button>
         </div>
 
-        <div className="scrollbar-app flex-1 min-h-0 overflow-y-auto">
+        <div className="scrollbar-app flex-1 min-h-0 overflow-y-auto pb-20">
           <button
             onClick={handleHome}
             className="w-full px-6 py-4 flex items-center gap-4 hover:bg-gray-100 transition-colors border-b border-gray-200"

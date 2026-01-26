@@ -50,7 +50,7 @@ export function NameSearchScreen({ hymns, onBack, onSelectHymn }: NameSearchScre
       </div>
 
       {/* Hymns List */}
-      <div className="scrollbar-app flex-1 min-h-0 overflow-y-auto">
+      <div className="scrollbar-app flex-1 min-h-0 overflow-y-auto pb-20">
         {filteredHymns.length === 0 ? (
           <div className="flex items-center justify-center h-full">
             <p className="text-gray-500 font-['Roboto']">

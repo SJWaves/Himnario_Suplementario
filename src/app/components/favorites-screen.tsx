@@ -29,7 +29,7 @@ export function FavoritesScreen({
         <h2 className="flex-1 font-['Roboto'] text-[18px]">Favoritos</h2>
       </div>
 
-      <div className="scrollbar-app flex-1 min-h-0 overflow-y-auto">
+      <div className="scrollbar-app flex-1 min-h-0 overflow-y-auto pb-20">
         {favoriteHymns.length === 0 ? (
           <div className="flex flex-col items-center justify-center min-h-[200px] px-6 text-center">
             <Heart className="w-12 h-12 text-[#C9A958]/40 mb-4" />

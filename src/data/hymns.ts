@@ -40,9 +40,8 @@ export const hymnsData: Hymn[] = [
       "\n 1. ¡Tranquila, mi alma! Dios es tu Refugio\nEspera en Él, paciente en la afflicción\nJesús te es fiel en toda tu congoja\nJesús, tu Dios, tu Amigo y Salvación,\n¡Tranquila! Dios, en medio de lo oscuro,\nHará brillar Su gloria y compasión.\n",
       "\n 2. ¡Silencio, mi alma! El Salvador gobierna:\nEl mar rugiente Le obedecerá\nTu Padre reina: Él obra en tu quebranto:\nMediante pruebas te acrisolará.\nAliviará tu duelo y sufrimiento:\nLo turbador preciado fin tendrá.\n",
       "\n 3. ¡Tranquila, mi alma! En lágrimas, o en luto,\nAl Dios excelso puedes acudir\nÉl cerca está: Su gracia y condolencia,\nEn tu dolor, saldrán a relucir.\nEspera en Dios: el Rey del universo\nPodrá tu angustia y duelo bendecir.\n",
-      "\n 4. Tranquila, espera, mi alma: el tiempo avanza:\nCon tu Señor por siempre morarás:\nCon Él no habrá más llanto ni dolores:\nSerá tu Dios; y tú Le servirás\nEntonces, mi alma, libre del pecado\nTu redentor por siempre adorarás.\n",
-      "\n 5. Ahora, mi alma, alaba al Rey benigno,\nConfía en Dios; y Dios se acercará\nMedita, mi alma, en Su Palabra santa:\nAsí tu fe se fortalecerá.\n",
-      "\n 6. Tranquila, espera: en medio de lo oscuro\nEl Sol de Vida resplandecerá."
+      "\n 4. Tranquila, espera, mi alma: el tiempo avanza:\nCon tu Señor por siempre morarás:\nCon Él no habrá más llanto ni dolores:\nSerá tu Dios; y tú Le servirás\nEntonces, mi alma, libre del pecado\nTu redentor por siempre adorarás.",
+      "\n 5. Ahora, mi alma, alaba al Rey benigno,\nConfía en Dios; y Dios se acercará\nMedita, mi alma, en Su Palabra santa:\nAsí tu fe se fortalecerá. \n Tranquila, espera: en medio de lo oscuro\nEl Sol de Vida resplandecerá."
     ],
   },
   {

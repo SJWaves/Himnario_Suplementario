@@ -20,7 +20,7 @@ export function AboutScreen({ onBack }: AboutScreenProps) {
       </div>
 
       {/* Content */}
-      <div className="scrollbar-app flex-1 min-h-0 overflow-y-auto">
+      <div className="scrollbar-app flex-1 min-h-0 overflow-y-auto pb-20">
         <div className="max-w-3xl mx-auto px-6 py-8 space-y-8">
           
           {/* About the Hymnal */}
