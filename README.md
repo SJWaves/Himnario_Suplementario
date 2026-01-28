@@ -237,7 +237,7 @@ Este proyecto es de uso exclusivo de la **Iglesia Cristiana Bíblica de Fusagasu
 
 Para preguntas o soporte técnico:
 
-- **Desarrollador**: Sara
+- **Desarrollador**: Sara Julieth Martínez Arias
 - **Email**: ciberespacio3000@proton.me
 - **GitHub**: [SJWaves](https://github.com/SJWaves)
 
