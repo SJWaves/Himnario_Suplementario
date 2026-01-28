@@ -1,5 +1,17 @@
 # Himnario Suplementario - ICB Fusagasugá
 
+                            {/* Hymnal Logo */}
+              <div className="flex justify-center mb-4">
+                <img 
+                  src={getAssetUrl('Logo_Himnario.png')}
+                  alt="Himnario Suplementario de Himnos y Cantos Congregacionales" 
+                  className="w-28 h-24 sm:w-28 sm:h-28 object-contain"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+              </div>
+
 [![Version](https://img.shields.io/badge/version-1.1.1-blue.svg)](https://github.com/SJWaves/Himnario_Suplementario)
 [![License](https://img.shields.io/badge/license-UNLICENSED-red.svg)](LICENSE)
 
