@@ -1,7 +1,11 @@
 # Himnario Suplementario - ICB Fusagasugá
-![Logo Himnario](Logo_Himnario.png)
+
 [![Version](https://img.shields.io/badge/version-1.1.1-blue.svg)](https://github.com/SJWaves/Himnario_Suplementario)
 [![License](https://img.shields.io/badge/license-UNLICENSED-red.svg)](LICENSE)
+
+<div align="center">
+  <img src="./public/Logo_Himnario.png" alt="Logo Himnario" width="112">
+</div>
 
 Aplicación móvil híbrida (Web + Android/iOS) que contiene el himnario suplementario de la Iglesia Cristiana Bíblica de Fusagasugá. Desarrollada con tecnologías modernas para proporcionar una experiencia nativa tanto en navegadores web como en dispositivos móviles.
 
