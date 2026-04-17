@@ -69,7 +69,9 @@ export function HomeScreen({ onSearchByNumber, onSearchByName }: HomeScreenProps
         {/* Inspirational quote */}
         <div className="z-10 text-center px-4 mt-4">
           <p className="font-['Lora'] text-[13px] sm:text-[14px] italic text-[#333333]/70">
-            Efesios 5:19: "Hablando entre vosotros con salmos, himnos y canticos espirituales, cantado y alabando al Señor en vuestros corazones"
+            Efesios 5:19
+            <br />
+            "Hablando entre vosotros con salmos, himnos y canticos espirituales, cantado y alabando al Señor en vuestros corazones"
           </p>
         </div>
       </div>
