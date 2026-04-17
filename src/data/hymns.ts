@@ -57,42 +57,75 @@ export const hymnsData: Hymn[] = [
     ],
     audioUrl: getAssetUrl('audio/4.mp3'),
   },
-  {
-    id: 5,
-    title: "Oh, qué amor incomparable",
-    reference: "1 Timoteo 1:13-14",
-    verses: [
-      "\n 1. Oh qué amor incomparable\nJesucristo nos mostró,\nCuando Su preciosa sangre,\nPor nosotros derramó.\n¿De Su amor, quién no recuerda?\n¿Quién no le adorará?\nQue exaltado siempre sea\nNuestro Príncipe de Paz.\n",
-      "\n 2. En el monte del Calvario,\nFuentes de infinito amor;\nAquel gran día se abrieron,\n¡Oh, qué inmerecido don!\nCuál gran río, de lo alto,\nSin cesar Su amor fluyó\nSobre el mundo derramando\nPaz, justicia y amor.\n",
-      "\n 3. Que busquemos cada día\nSolo el reino del Señor,\nY entreguemos nuestra vida,\nComo ofrenda de amor.\nSolo en Él nos gloriaremos,\nNada más importará;\nCristo salva, Él lo ha dicho,\nSolo en Él hay libertad.\n",
-      "\n 4. Su Palabra es mi guía\nY me guía a no pecar;\nEn mi Cristo yo confío,\nNada en Él me ha de faltar.\nDe Su plenitud derrama\nSu amor y Su poder,\nEn mi ser y sin medida,\nAl rendirme a Sus pies.\n",
-      "                                                          "
-    ],
-    audioUrl: getAssetUrl('audio/5.mp3'),
-  },
+//  {
+//    id: 5,
+//    title: "Oh, qué amor incomparable",
+//    reference: "1 Timoteo 1:13-14",
+//    verses: [
+//      "\n 1. Oh qué amor incomparable\nJesucristo nos mostró,\nCuando Su preciosa sangre,\nPor nosotros derramó.\n¿De Su amor, quién no recuerda?\n¿Quién no le adorará?\nQue exaltado siempre sea\nNuestro Príncipe de Paz.\n",
+//      "\n 2. En el monte del Calvario,\nFuentes de infinito amor;\nAquel gran día se abrieron,\n¡Oh, qué inmerecido don!\nCuál gran río, de lo alto,\nSin cesar Su amor fluyó\nSobre el mundo derramando\nPaz, justicia y amor.\n",
+//      "\n 3. Que busquemos cada día\nSolo el reino del Señor,\nY entreguemos nuestra vida,\nComo ofrenda de amor.\nSolo en Él nos gloriaremos,\nNada más importará;\nCristo salva, Él lo ha dicho,\nSolo en Él hay libertad.\n",
+//      "\n 4. Su Palabra es mi guía\nY me guía a no pecar;\nEn mi Cristo yo confío,\nNada en Él me ha de faltar.\nDe Su plenitud derrama\nSu amor y Su poder,\nEn mi ser y sin medida,\nAl rendirme a Sus pies.\n",
+//      "                                                          "
+//    ],
+//    audioUrl: getAssetUrl('audio/5.mp3'),
+//  },
+      {
+      id: 5,
+      title: "¡Ved al Hombre de Dolores!",
+      reference: "Filipenses 2:9",
+      verses: [
+        "\n 1. ¡Ved al Hombre de Dolores!\nSantos, ¡ved Su gloria ya!\nAnte Aquel que es victorioso\ntodo ser se inclinará.\n¡Coronadle! Cristo en triunfo reinará.\n",
+        "\n 2. ¡Ángeles, ved Sus trofeos!\nSuya es toda potestad.\nEn Su honor retumbe el cielo.\nEntronadle en majestad.\n¡Coronadle! A Jesús tributo dad.\n",
+        "\n 3. Pecadores le befaron,\ncoronando al Salvador.\nÁngeles y santos\nLe atribuyen el más alto honor.\n¡Coronadle! Dad renombre al Vencedor.\n",
+        "\n 4. ¡Qué triunfantes los acordes!\n¡Qué exaltada aclamación!\n¡El Señor de los Señores!\n¡Qué gozosa es la visión!\n¡Rey de Reyes! ¡Cristo—en Su exaltación!\nAmén\n"
+      ],
+    },
+//  {
+//    id: 6,
+//    title: "Levántate Iglesia",
+//    reference: "Hebreos 12:1-2",
+//    verses: [
+//      "\n 1. Levántate, iglesia del Señor, cíñete de Su armadura;\nOye la voz de Cristo el Capitán; de Su fuerza el débil tomará.\nCon el escudo de la fe, al diablo no hemos de temer.\nEjército, armado de amor, ve y alcanza a los perdidos.\n",
+//      "\n 2. Nuestra misión será servir y amar, combatiendo al enemigo.\nLa espada de Su Espíritu traerá libertad a los cautivos.\nAunque haya pruebas por doquier, segura es Su salvación;\nJesús tendrá lo que ganó al morir: una herencia de naciones.\n",
+//      "\n 3. Mira en la cruz la gracia y el perdón, donde el Hijo fue inmolado;\nMas aplastados yacen a los pies del Señor Sus enemigos.\nConquistador, Se levantó, es Cristo quien resucitó;\nSe cantará Su triunfo hasta que todo ojo pueda verlo.\n",
+//      "\n 4. Su Espíritu nos llene de valor, nos dé fuerza a cada paso.\nNos dé la fe para el premio obtener de un siervo fiel y bueno.\nLos santos que lucharon ya celebran Su fidelidad;\nDios les guardó y así nos guardará hasta estar con Él en gloria.\n"
+//    ],
+//    audioUrl: getAssetUrl('audio/6.mp3'),
+//  },
   {
     id: 6,
-    title: "Levántate Iglesia",
-    reference: "Hebreos 12:1-2",
+    title: "Dominará Jesús, el Rey",
+    reference: "Salmo 72:7",
     verses: [
-      "\n 1. Levántate, iglesia del Señor, cíñete de Su armadura;\nOye la voz de Cristo el Capitán; de Su fuerza el débil tomará.\nCon el escudo de la fe, al diablo no hemos de temer.\nEjército, armado de amor, ve y alcanza a los perdidos.\n",
-      "\n 2. Nuestra misión será servir y amar, combatiendo al enemigo.\nLa espada de Su Espíritu traerá libertad a los cautivos.\nAunque haya pruebas por doquier, segura es Su salvación;\nJesús tendrá lo que ganó al morir: una herencia de naciones.\n",
-      "\n 3. Mira en la cruz la gracia y el perdón, donde el Hijo fue inmolado;\nMas aplastados yacen a los pies del Señor Sus enemigos.\nConquistador, Se levantó, es Cristo quien resucitó;\nSe cantará Su triunfo hasta que todo ojo pueda verlo.\n",
-      "\n 4. Su Espíritu nos llene de valor, nos dé fuerza a cada paso.\nNos dé la fe para el premio obtener de un siervo fiel y bueno.\nLos santos que lucharon ya celebran Su fidelidad;\nDios les guardó y así nos guardará hasta estar con Él en gloria.\n"
+      "\n 1. Dominará Jesús, el Rey,\nen todo país que alumbra el sol,\nregido por Su santa Ley,\ny puesto a prueba en Su crisol.\n",
+      "\n 2. Le ensalzarán en la canción\nque eternamente elevarán.\nEn nombre de Él cada oración\ncual un perfume suave harán.\n",
+      "\n 3. Paganos mil traerán su don:\ndelante de Él se postrarán.\nPrez, honra, y gloria al Salvador\nnaciones todas alzarán.\n",
+      "\n 4. Propicio entonces nos será\nel brazo fuerte del Señor.\nDel poderoso librará\nal que no tiene ayudador.\n",
+      "\n 5. Toda criatura traiga honor\na nuestro Rey y Salvador.\nLos ángeles mil himnos den,\ny todo hombre un gran Amén.\nAmén\n"
     ],
-    audioUrl: getAssetUrl('audio/6.mp3'),
   },
+//  {
+//    id: 7,
+//    title: "Sólo En Jesús",
+//    reference: "Hechos 4:12",
+//    verses: [
+//      "\n 1. Solo en Jesús está mi fe, mi esperanza y mi canción.\nPiedra angular, firme sostén, inconmovible en la aflicción.\nCuán grande amor, inmensa paz, en el temor o adversidad.\nConsolador, amigo fiel, yo en Su amor me sostendré.\n",
+//      "\n 2. Solo en Jesús, Hijo de Dios, quien se humilló por nuestro bien.\nCordero de mi salvación, por este mundo herido fue.\nEn una cruz fue a morir, y Dios mostró Su gracia ahí.\nPues mi pecado Él llevó, en Su aflicción vida me dio.\n",
+//      "\n 3. En un sepulcro, Él yació, el cuerpo inerte del Señor.\nMas el tercer día llegó: ¡resucitó en gloriosa luz!\nY al triunfar sobre el mal, perdió el pecado potestad.\nDe Él suyo soy, Él mío es, pues con Su sangre me compró.\n",
+//      "\n 4. Desde el nacer hasta el morir, sea el poder de Cristo en mí.\nNo temeré, seguro estoy, mi vida yo a Él le doy.\nNingún poder, ningún afán de Él me arrebatará.\nHasta que Él venga otra vez, en Su poder me sostendrá.\n"
+//    ],
+//    audioUrl: getAssetUrl('audio/7.mp3'),
+//  },
   {
     id: 7,
-    title: "Sólo En Jesús",
-    reference: "Hechos 4:12",
+    title: "El comienzo de la adoración",
+    reference: "Habacuc 2:20",
     verses: [
-      "\n 1. Solo en Jesús está mi fe, mi esperanza y mi canción.\nPiedra angular, firme sostén, inconmovible en la aflicción.\nCuán grande amor, inmensa paz, en el temor o adversidad.\nConsolador, amigo fiel, yo en Su amor me sostendré.\n",
-      "\n 2. Solo en Jesús, Hijo de Dios, quien se humilló por nuestro bien.\nCordero de mi salvación, por este mundo herido fue.\nEn una cruz fue a morir, y Dios mostró Su gracia ahí.\nPues mi pecado Él llevó, en Su aflicción vida me dio.\n",
-      "\n 3. En un sepulcro, Él yació, el cuerpo inerte del Señor.\nMas el tercer día llegó: ¡resucitó en gloriosa luz!\nY al triunfar sobre el mal, perdió el pecado potestad.\nDe Él suyo soy, Él mío es, pues con Su sangre me compró.\n",
-      "\n 4. Desde el nacer hasta el morir, sea el poder de Cristo en mí.\nNo temeré, seguro estoy, mi vida yo a Él le doy.\nNingún poder, ningún afán de Él me arrebatará.\nHasta que Él venga otra vez, en Su poder me sostendrá.\n"
+      "\n 1. ¡Dios está presente!\nVamos a postrarnos ante Él con reverencia.\nEn silencio estemos\nfrente a Su grandeza, implorando Su clemencia.\nQuien con Él quiera andar su mirada eleve;\nvotos Le renueve.\n",
+      "\n 2. ¡Dios está presente!\nY los serafines Lo rodean reverentes.\n¡Santo! ¡Santo! ¡Santo!\nen Su honor Le cantan los ejércitos celestes.\nOh, buen Dios, nuestra voz como humilde ofrenda\na Tu trono ascienda.\n",
+      "\n 3. Como el sol irradia\nsobre el tierno lirio que contento se doblega,\nDios omnipresente,\nilumina mi alma; y feliz yo Te obedezca.\nHaz que, así, Tú en mí seas reflejado,\ny Tu amor probado.\nAmén\n"
     ],
-    audioUrl: getAssetUrl('audio/7.mp3'),
   },
   {
     id: 8,
@@ -129,4 +162,17 @@ export const hymnsData: Hymn[] = [
     ],
     audioUrl: getAssetUrl('audio/10.mp3'),
   },
+  {
+  id: 11,
+  title: "La obra misionera",
+  reference: "Lucas 14:16",
+  verses: [
+    "\n 1. ¡Cuán solemne y dulce aquel lugar\ndonde mora Cristo, el Señor!\nAllí Su amor de su almacén\ndespliega lo mejor.\n",
+    "\n 2. ¡Banquete rico! El corazón,\nadmirado, clama así:\n¿Por qué, Señor? ¿Por qué será\nque me invitaste a mí?\n",
+    "\n 3. ¿Por qué me hiciste oír Tu voz,\ny entrar, y ver Tu bondad?\nPues miles de hambre mueren ya,\nrehusando Tu verdad.\n",
+    "\n 4. Pues el mismo amor que el manjar sirvió\ndulcemente a entrar me llevó:\nsi no, en mi pecado aún habría estado yo.\n",
+    "\n 5. Sobre las naciones, ¡piedad, Señor!\nConstríñelas a llegar.\nEnvía Tu Palabra allí;\ny tráelas a Tu hogar.\n",
+    "\n 6. Tus iglesias llenas nos urge ver\npara que, con un corazón,\nla raza escogida de Tu gracia\neleve el son.\nAmén\n"
+  ],
+},
 ];
