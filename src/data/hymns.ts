@@ -45,6 +45,7 @@ export const hymnsData: Hymn[] = [
       "\n 4. Tranquila, espera, mi alma: el tiempo avanza:\nCon tu Señor por siempre morarás:\nCon Él no habrá más llanto ni dolores:\nSerá tu Dios; y tú Le servirás\nEntonces, mi alma, libre del pecado\nTu redentor por siempre adorarás.",
       "\n 5. Ahora, mi alma, alaba al Rey benigno,\nConfía en Dios; y Dios se acercará\nMedita, mi alma, en Su Palabra santa:\nAsí tu fe se fortalecerá. \n Tranquila, espera: en medio de lo oscuro\nEl Sol de Vida resplandecerá."
     ],
+    audioUrl: getAssetUrl('audio/3.mp3'),
   },
   {
     id: 4,
@@ -80,30 +81,18 @@ export const hymnsData: Hymn[] = [
         "\n 3. Pecadores le befaron,\ncoronando al Salvador.\nÁngeles y santos\nLe atribuyen el más alto honor.\n¡Coronadle! Dad renombre al Vencedor.\n",
         "\n 4. ¡Qué triunfantes los acordes!\n¡Qué exaltada aclamación!\n¡El Señor de los Señores!\n¡Qué gozosa es la visión!\n¡Rey de Reyes! ¡Cristo—en Su exaltación!\nAmén\n"
       ],
+      audioUrl: getAssetUrl('audio/5.mp3'),
     },
 //  {
 //    id: 6,
 //    title: "Levántate Iglesia",
-//    reference: "Hebreos 12:1-2",
-//    verses: [
-//      "\n 1. Levántate, iglesia del Señor, cíñete de Su armadura;\nOye la voz de Cristo el Capitán; de Su fuerza el débil tomará.\nCon el escudo de la fe, al diablo no hemos de temer.\nEjército, armado de amor, ve y alcanza a los perdidos.\n",
-//      "\n 2. Nuestra misión será servir y amar, combatiendo al enemigo.\nLa espada de Su Espíritu traerá libertad a los cautivos.\nAunque haya pruebas por doquier, segura es Su salvación;\nJesús tendrá lo que ganó al morir: una herencia de naciones.\n",
-//      "\n 3. Mira en la cruz la gracia y el perdón, donde el Hijo fue inmolado;\nMas aplastados yacen a los pies del Señor Sus enemigos.\nConquistador, Se levantó, es Cristo quien resucitó;\nSe cantará Su triunfo hasta que todo ojo pueda verlo.\n",
-//      "\n 4. Su Espíritu nos llene de valor, nos dé fuerza a cada paso.\nNos dé la fe para el premio obtener de un siervo fiel y bueno.\nLos santos que lucharon ya celebran Su fidelidad;\nDios les guardó y así nos guardará hasta estar con Él en gloria.\n"
-//    ],
-//    audioUrl: getAssetUrl('audio/6.mp3'),
-//  },
-  {
-    id: 6,
-    title: "Dominará Jesús, el Rey",
-    reference: "Salmo 72:7",
-    verses: [
-      "\n 1. Dominará Jesús, el Rey,\nen todo país que alumbra el sol,\nregido por Su santa Ley,\ny puesto a prueba en Su crisol.\n",
+//    r
       "\n 2. Le ensalzarán en la canción\nque eternamente elevarán.\nEn nombre de Él cada oración\ncual un perfume suave harán.\n",
       "\n 3. Paganos mil traerán su don:\ndelante de Él se postrarán.\nPrez, honra, y gloria al Salvador\nnaciones todas alzarán.\n",
       "\n 4. Propicio entonces nos será\nel brazo fuerte del Señor.\nDel poderoso librará\nal que no tiene ayudador.\n",
       "\n 5. Toda criatura traiga honor\na nuestro Rey y Salvador.\nLos ángeles mil himnos den,\ny todo hombre un gran Amén.\nAmén\n"
     ],
+    audioUrl: getAssetUrl('audio/6.mp3'),
   },
 //  {
 //    id: 7,
@@ -126,6 +115,7 @@ export const hymnsData: Hymn[] = [
       "\n 2. ¡Dios está presente!\nY los serafines Lo rodean reverentes.\n¡Santo! ¡Santo! ¡Santo!\nen Su honor Le cantan los ejércitos celestes.\nOh, buen Dios, nuestra voz como humilde ofrenda\na Tu trono ascienda.\n",
       "\n 3. Como el sol irradia\nsobre el tierno lirio que contento se doblega,\nDios omnipresente,\nilumina mi alma; y feliz yo Te obedezca.\nHaz que, así, Tú en mí seas reflejado,\ny Tu amor probado.\nAmén\n"
     ],
+    audioUrl: getAssetUrl('audio/7.mp3'),
   },
   {
     id: 8,
@@ -174,5 +164,6 @@ export const hymnsData: Hymn[] = [
     "\n 5. Sobre las naciones, ¡piedad, Señor!\nConstríñelas a llegar.\nEnvía Tu Palabra allí;\ny tráelas a Tu hogar.\n",
     "\n 6. Tus iglesias llenas nos urge ver\npara que, con un corazón,\nla raza escogida de Tu gracia\neleve el son.\nAmén\n"
   ],
+  audioUrl: getAssetUrl('audio/11.mp3'),
 },
 ];
