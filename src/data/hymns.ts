@@ -85,12 +85,25 @@ export const hymnsData: Hymn[] = [
     },
 //  {
 //    id: 6,
-//    title: "Levántate Iglesia",
-//    r
-      "\n 2. Le ensalzarán en la canción\nque eternamente elevarán.\nEn nombre de Él cada oración\ncual un perfume suave harán.\n",
-      "\n 3. Paganos mil traerán su don:\ndelante de Él se postrarán.\nPrez, honra, y gloria al Salvador\nnaciones todas alzarán.\n",
-      "\n 4. Propicio entonces nos será\nel brazo fuerte del Señor.\nDel poderoso librará\nal que no tiene ayudador.\n",
-      "\n 5. Toda criatura traiga honor\na nuestro Rey y Salvador.\nLos ángeles mil himnos den,\ny todo hombre un gran Amén.\nAmén\n"
+//    title: "Dominará Jesús, el Rey",
+//    reference: "Salmo 72:7",
+//    verses: [
+//      "\n 1. Dominará Jesús, el Rey,\nen todo país que alumbra el sol,\nregido por Su santa Ley,\ny puesto a prueba en Su crisol.\n",
+//      "\n 2. Le ensalzarán en la canción\nque eternamente elevarán.\nEn nombre de Él cada oración\ncual un perfume suave harán.\n",
+//      "\n 3. Paganos mil traerán su don:\ndelante de Él se postrarán.\nPrez, honra, y gloria al Salvador\nnaciones todas alzarán.\n",
+//      "\n 4. Propicio entonces nos será\nel brazo fuerte del Señor.\nDel poderoso librará\nal que no tiene ayudador.\n",
+//      "\n 5. Toda criatura traiga honor\na nuestro Rey y Salvador.\nLos ángeles mil himnos den,\ny todo hombre un gran Amén.\nAmén\n"
+//    ],
+//  },
+  {
+    id: 6,
+    title: "Levántate Iglesia",
+    reference: "Hebreos 12:1-2",
+    verses: [
+      "\n 1. Levántate, iglesia del Señor, cíñete de Su armadura;\nOye la voz de Cristo el Capitán; de Su fuerza el débil tomará.\nCon el escudo de la fe, al diablo no hemos de temer.\nEjército, armado de amor, ve y alcanza a los perdidos.\n",
+      "\n 2. Nuestra misión será servir y amar, combatiendo al enemigo.\nLa espada de Su Espíritu traerá libertad a los cautivos.\nAunque haya pruebas por doquier, segura es Su salvación;\nJesús tendrá lo que ganó al morir: una herencia de naciones.\n",
+      "\n 3. Mira en la cruz la gracia y el perdón, donde el Hijo fue inmolado;\nMas aplastados yacen a los pies del Señor Sus enemigos.\nConquistador, Se levantó, es Cristo quien resucitó;\nSe cantará Su triunfo hasta que todo ojo pueda verlo.\n",
+      "\n 4. Su Espíritu nos llene de valor, nos dé fuerza a cada paso.\nNos dé la fe para el premio obtener de un siervo fiel y bueno.\nLos santos que lucharon ya celebran Su fidelidad;\nDios les guardó y así nos guardará hasta estar con Él en gloria.\n"
     ],
     audioUrl: getAssetUrl('audio/6.mp3'),
   },
